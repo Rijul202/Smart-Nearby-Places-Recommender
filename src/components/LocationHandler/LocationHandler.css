@@ -1,0 +1,131 @@
+.location-handler {
+  width: 100%;
+}
+
+.location-handler__auto-status {
+  margin-bottom: 1.5rem;
+}
+
+.location-handler__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.location-handler__status--loading {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.location-handler__status--error {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.location-handler__status--success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.location-handler__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #1976d2;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.location-handler__action-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.location-handler__action-btn:hover {
+  background-color: #1565c0;
+}
+
+.location-handler__action-btn--secondary {
+  background-color: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+}
+
+.location-handler__action-btn--secondary:hover {
+  background-color: #e3f2fd;
+}
+
+.location-handler__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.location-handler__manual {
+  margin-bottom: 1.5rem;
+}
+
+.location-handler__current {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+.location-handler__current h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.location-handler__coordinates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.location-handler__coordinates strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .location-handler__status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location-handler__action-btn {
+    width: 100%;
+  }
+
+  .location-handler__actions {
+    width: 100%;
+  }
+
+  .location-handler__actions .location-handler__action-btn {
+    flex: 1;
+  }
+}
